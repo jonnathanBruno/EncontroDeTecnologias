@@ -1,0 +1,186 @@
+﻿var model = angular.module('model', ['ngRoute', 'ngMask', 'ui.bootstrap.datetimepicker']);
+var dominio = window.location.origin + "/";
+
+model.config(function ($sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist([
+      'self',
+      'https://www.youtube.com/**'
+    ]);
+});
+
+
+model.controller('controlador', function ($scope) {
+
+    $scope.emailNewsLetterSucesso = undefined;
+
+    $scope.fecharBarraEndereco = function () {
+        $('.bar-get-email').hide();
+    }
+
+    $scope.contato = {};
+
+    $scope.enviarContato = function () {
+        $scope.loading = true;
+        //Fazer requisição para pagar com pagseguro...
+        $.ajax({
+            type: "POST",
+            url: "Cliente.asmx/enviarContatoSite",
+            dataType: "json",
+            async: false,
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({
+                entrada: JSON.stringify($scope.contato)
+            }),
+            success: function (data) {
+
+                $scope.loading = false;
+                if (data.d != 'Erro') {
+                    $('#sucessoEnviarContato').modal('toggle');
+                    $('#sucessoEnviarContato').modal('show');
+                } else {
+                    $('#erroEnviarContato').modal('toggle');
+                    $('#erroEnviarContato').modal('show');
+                }
+
+            },
+            error: function () {
+                $scope.loading = false;
+                $('#erroGeral').modal('toggle');
+                $('#erroGeral').modal('show');
+            }
+        });
+
+    }
+
+    $scope.enviarNewsLetter = function () {
+
+        $scope.loading = true;
+        var entrada = {
+            emailNewsLetter: $scope.emailNewsLetter,
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "Cliente.asmx/enviarNewsletter",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({
+                entrada: JSON.stringify(entrada)
+            }),
+            success: function (data) {
+
+                if (data.d != 'Erro') {
+                    //$('#sucessoEnviarContato').modal('toggle');
+                    //$('#sucessoEnviarContato').modal('show');
+                    $scope.emailNewsLetterSucesso = true;
+                    $scope.loading = false;
+                    $scope.$apply();
+                } else {
+                    //$('#erroEnviarContato').modal('toggle');
+                    //$('#erroEnviarContato').modal('show');
+                    $scope.emailNewsLetterSucesso = false;
+                    $scope.loading = false;
+                    $scope.$apply();
+                }
+
+            },
+            error: function () {
+                $scope.loading = false;
+                $('#erroGeral').modal('toggle');
+                $('#erroGeral').modal('show');
+            }
+        });
+
+    }
+
+    $scope.mensagemSucesso = false;
+
+    $scope.mensagemErro = false;
+
+    $scope.enviarContatoSiteSistema = function () {
+
+        $scope.loading = true;
+
+        $.ajax({
+            type: "POST",
+            url: "Cliente.asmx/enviarContatoSiteSistema",
+            dataType: "json",
+            async: true,
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({
+                entrada: JSON.stringify($scope.contato)
+            }),
+            success: function (data) {
+
+                if (data.d != 'Erro') {
+                    $scope.loading = false;
+                    $scope.mensagemSucesso = true;
+                } else {
+                    $scope.loading = false;
+                    $scope.mensagemErro = true;
+                }
+                $scope.$apply();
+
+            },
+            error: function () {
+                $scope.mensagemErro = true;
+            }
+        });
+
+    }
+
+    $scope.cadastrarClientePeriodoTeste = function () {
+
+        $scope.loading = true;
+
+        $.ajax({
+            type: "POST",
+            url: "Cliente.asmx/cadastrarClientePeriodoTeste",
+            dataType: "json",
+            async: true,
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({
+                entrada: JSON.stringify($scope.cliente)
+            }),
+            success: function (data) {
+
+                if (data.d != 'Erro') {
+                    $scope.loading = false;
+                    $scope.mensagemSucesso = true;
+                    $('#cadastroSucesso').modal('toggle');
+                    $('#cadastroSucesso').modal('show');
+                } else {
+                    $scope.loading = false;
+                    $scope.mensagemErro = true;
+                    $('#cadastroSucesso').modal('toggle');
+                    $('#cadastroSucesso').modal('show');
+                }
+                $scope.$apply();
+
+            },
+            error: function () {
+                $scope.mensagemErro = true;
+            }
+        });
+
+    }
+
+    $scope.sairSistema = function () {
+        location.href = "http://ipragas.com.br/Sistema/login.html?empresa=" + $scope.dadosEmpresa.dominio;
+    }
+
+    $scope.caracteresEspeciais = false;
+
+    $scope.checarCaracteresDominio = function () {
+
+        var TCode = document.getElementById('dominio').value;
+
+        if (/[^a-zA-Z0-9\-\/]/.test(TCode)) {
+            $scope.caracteresEspeciais = true;
+            $scope.$apply();
+        }
+        $scope.caracteresEspeciais = false;
+
+    }
+
+});

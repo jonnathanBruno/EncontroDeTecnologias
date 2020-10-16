@@ -1,0 +1,49 @@
+﻿angular.module('model')
+    .config(['$routeProvider', function ($routeProvider) {
+
+        $routeProvider
+            .when('/', {
+                templateUrl: 'views/orcamento-controle-pragas.html',
+                controller: 'orcamento-controle-pragas'
+            })
+            .when('/orcamento-controle-pragas', {
+                templateUrl: 'views/orcamento-controle-pragas.html',
+                controller: 'orcamento-controle-pragas'
+            })
+            .when('/perfil-empresa', {
+                templateUrl: 'views/perfil-empresa.html',
+                controller: 'perfil-empresa'
+            })
+            .when('/orcamentos', {
+                templateUrl: 'views/orcamento-controle-pragas.html',
+                controller: 'orcamento-controle-pragas'
+            })
+            .when('/controle-pragas', {
+                templateUrl: 'views/orcamento-controle-pragas.html',
+                controller: 'orcamento-controle-pragas'
+            })
+            .when('/historico-ordem-servico', {
+                templateUrl: 'views/historico-ordem-servico.html',
+                controller: 'historico-ordem-servico'
+            })
+            .when('/pergunta-cliente', {
+                templateUrl: 'views/pergunta-cliente.html',
+                controller: 'pergunta-cliente'
+            })
+            .when('/login', {
+                templateUrl: 'views/login.html',
+                controller: 'login'
+            })
+            .when('/confirmacao-orcamento-controle-pragas', {
+                templateUrl: 'views/confirmacao-orcamento-controle-pragas.html',
+                controller: 'confirmacao-orcamento-controle-pragas'
+            })
+            .when('/finalizacao-orcamento', {
+                templateUrl: 'views/finalizacao-orcamento.html',
+                controller: 'finalizacao-orcamento'
+            })
+            .when('/erro-transacao', {
+                templateUrl: 'views/erro.html',
+                controller: 'erro'
+            })
+    }]);
