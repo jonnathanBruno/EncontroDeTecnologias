@@ -27,12 +27,20 @@
     <link href="./arquivos/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="./arquivos/main_styles.css">
     <link rel="stylesheet" type="text/css" href="./arquivos/responsive.css">
+	
 
     <link rel="stylesheet" href="./arquivos/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
 
     <link href="./arquivos/loading.css" rel="stylesheet">
-		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>		
 	<style type="text/css">
+.avatar{
+-webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid white;
+}	
+	
 @font-face {
   font-weight: 400;
   font-style:  normal;
@@ -40,6 +48,7 @@
 
   src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Regular.woff2') format('woff2');
 }
+
 @font-face {
   font-weight: 400;
   font-style:  italic;
@@ -116,7 +125,7 @@
                                     <div class="logo_container">
                                         <div class="logo">
                                             <a href="http://www.educacao.rn.gov.br/">
-                                                <div class="logo_img"><img style="margin-top: 0px;width: 170px; margin: -22px" src="http://adcon.rn.gov.br/ACERVO/seec/IMG/IMG000000000052395.PNG" alt=""></div>
+                                                <div class="logo_img"><img id="logo" style="margin-top: 0px;width: 170px; margin: -22px" src="http://adcon.rn.gov.br/ACERVO/seec/IMG/IMG000000000052395.PNG" alt=""></div>
                                             </a>
                                             <h3 style="font-size: 20px;margin: -10px 0px 0 80px;color: #fff;text-decoration: none;text-shadow: 1px 1px 5px #004581;">Secretaria de Estado da Educação, da Cultura, do Esporte e do Lazer</h3>
                                         </div>
@@ -285,87 +294,76 @@
         </div>
 		
 		<div class="container">
-
 		<div class="row row-offcanvas row-offcanvas-right">
-
-        <div class="col-xs-12 col-sm-9">
-			  
+        <div class="col-xs-12 col-sm-9">		  
 		    <div class="intro_title_container">
 				<div class="intro_subtitle">ETERN</div>
 				<h1 class="intro_title">Comissão Organizadora do I ETERN - 2020</h1>
 			</div>
-			<img  style="width: 1145px; height: 240px; margin-bottom: 25px;" src="images/5.png" alt="">   
-            <div class="row" style="width:1175px">
+				<img  style="width: 1145px; height: 240px; margin-bottom: 25px;" src="images/5.png" alt="">   
+				<div class="row" style="width:1175px">
 				<div class="col-xs-6 col-lg-4">
-				  <h3 style="color: black;">Coordenação geral</h3>
-				  <p>Márcia Gurgel<br>Ana Paula de Oliveira Flor <br> Elisângela Tavares Dias <br> Zelda Simplicio de Sales Caldas</p>
+					  <h3 style="color: black;">Coordenação geral</h3>
+					  <p>Márcia Gurgel<br>Ana Paula de Oliveira Flor <br> Elisângela Tavares Dias <br> Zelda Simplicio de Sales Caldas</p>
+					</div>
+				<div class="col-xs-6 col-lg-4">
+				  <h3 style="color: black;">Secretaria do Evento</h3>
+				  <p> Herlane De Lourdes Silva<b> - Coordenadora</b><br> 
+					Maria Luziene de Medeiros<br>
+					Cibelle Barros de Almeida Valença</p>
 				</div>
-           <div class="col-xs-6 col-lg-4">
-              <h3 style="color: black;">Secretaria do Evento</h3>
-			  <p> Herlane De Lourdes Silva<b> - Coordenadora</b><br> 
-				Maria Luziene de Medeiros<br>
-				Cibelle Barros de Almeida Valença
-				</p>
-            </div>
-		    <div class="col-xs-6 col-lg-4">
-                <h3 style="color: black;">Comitê de Desenvolvimento/Design</h3>
-                <p>
-				Yuri Eduardo de Andrade Barros<b> - Coordenador</b><br>
-				 Herlane De Lourdes Silva Candido <br>
-				 Jonnathan Bruno Ribeiro De Lima 
-				 </p>
-            </div>
-            <div class="col-xs-6 col-lg-4">
-              <h3 style="color: black;">Comitê de Oficinas</h3>
-              <p> Regina Celli Fernandes de Araújo <b> - Coordenadora </b><br>
-					Cyro Andreolle Lima Soares <br>
-					Francisco Wallyson Bezerra da Silva <br>
-					Luciana da Silva Morais <br>
+				<div class="col-xs-6 col-lg-4">
+					<h3 style="color: black;">Comitê de Desenvolvimento/Design</h3>
+					<p>
+					Yuri Eduardo de Andrade Barros<b> - Coordenador</b><br>
+					 Herlane De Lourdes Silva Candido <br>
+					 Jonnathan Bruno Ribeiro De Lima 
+					 </p>
+				</div>
+				<div class="col-xs-6 col-lg-4">
+				  <h3 style="color: black;">Comitê de Oficinas</h3>
+				  <p> Regina Celli Fernandes de Araújo <b> - Coordenadora </b><br>
+						Cyro Andreolle Lima Soares <br>
+						Francisco Wallyson Bezerra da Silva <br>
+						Luciana da Silva Morais <br>
+						Márcia Mychelle Nogueira do Nascimento <br>
+						Joaquim Inácio de Azevedo Neto <br>
+						Rummening Marinho dos Santos <br>
+						Sônia Maria Pereira</p>
+				</div>
+				<div class="col-xs-6 col-lg-4">
+				  <h3 style="color: black;">Comitê de Avaliação</h3>
+				  <p>Elisângela Tavares Dias <b> - Coordenadora </b><br>
+					Cibelle Cristina Cristina Barros de Almeida Valença <br>
+					Maria Aldeiza da Silva <br>
+					Maria Luziene de Medeiros <br>
 					Márcia Mychelle Nogueira do Nascimento <br>
-					Joaquim Inácio de Azevedo Neto <br>
-					Rummening Marinho dos Santos <br>
-					Sônia Maria Pereira
-					</p>
-            </div>
-			<div class="col-xs-6 col-lg-4">
-              <h3 style="color: black;">Comitê de Avaliação</h3>
-              <p>Elisângela Tavares Dias <b> - Coordenadora </b><br>
-				Cibelle Cristina Cristina Barros de Almeida Valença <br>
-				Maria Aldeiza da Silva <br>
-				Maria Luziene de Medeiros <br>
-				Márcia Mychelle Nogueira do Nascimento <br>
-				Mifra Angélica Chaves da Costa <br>
-				Regina Lúcia Alves da Costa <br>
-				Zelda Simplicio de Sales Caldas <br>
-
-
-				 </p>
-            </div>
-            <div class="col-xs-6 col-lg-4">
-              <h3 style="color: black;">Comitê de Inscrições</h3>
-              <p> Nilvana Januário <b> - Coordenadora </b><br>
-				Yuri Eduardo de Andrade Barros Freire <br>
-				Vanessinha do GPD
-
-				</p>
-            </div>
-			<div class="col-xs-6 col-lg-4">
-              <h3 style="color: black;">Comitê de Divulgação/Mídias/Sites/Redes Sociais</h3>
-              <p>Carlos Gomes  <b> - Coordenador </b> <br>
-				Danilo Bezerra Vieira <br>
-				Leilton de Souza Lima <br>
-            </div>
-			<div class="col-xs-6 col-lg-4">
-
-			  <h3 style="color: black;">Comitê de Organização</h3>
-              <p>Zelda Simplicio de Sales Caldas <b> - Coordenadora </b> <br>
-				Ana Paula dos Santos Oliveira Flor <br>
-				Carlos Gomes <br>
-				Cibelle Cristina Barros de Almeida  <br>
-				Cyro Andreolle Lima Soares <br>
-				Elisângela Tavares Dias 
-            </div>
-			<div class="col-xs-6 col-lg-4">
+					Mifra Angélica Chaves da Costa <br>
+					Regina Lúcia Alves da Costa <br>
+					Zelda Simplicio de Sales Caldas <br></p>
+				</div>
+				<div class="col-xs-6 col-lg-4">
+				  <h3 style="color: black;">Comitê de Inscrições</h3>
+				  <p> Nilvana Januário <b> - Coordenadora </b><br>
+					Yuri Eduardo de Andrade Barros Freire <br>
+					Vanessinha do GPD</p>
+				</div>
+				<div class="col-xs-6 col-lg-4">
+				  <h3 style="color: black;">Comitê de Divulgação/Mídias/Sites/Redes Sociais</h3>
+				  <p>Carlos Gomes  <b> - Coordenador </b> <br>
+					Danilo Bezerra Vieira <br>
+					Leilton de Souza Lima <br></p>
+				</div>
+				<div class="col-xs-6 col-lg-4">
+				  <h3 style="color: black;">Comitê de Organização</h3>
+				  <p>Zelda Simplicio de Sales Caldas <b> - Coordenadora </b> <br>
+					Ana Paula dos Santos Oliveira Flor <br>
+					Carlos Gomes <br>
+					Cibelle Cristina Barros de Almeida  <br>
+					Cyro Andreolle Lima Soares <br>
+					Elisângela Tavares Dias </p>
+				</div>
+				<div class="col-xs-6 col-lg-4">
 
 			  <h3 style="color: black;">Comitê de Organização</h3>
 			  <p>
@@ -377,16 +375,12 @@
 				Rummening Marinho dos Santos <br>
 				Sônia Maria Pereira	</p>
             </div>
-          </div><!--/row-->
+				</div>
+	     </div><!--/row-->
         </div><!--/.col-xs-12.col-sm-9-->
 
-        
-      </div><!--/row-->
-
-      <hr>
-
-
-    </div>
+        </div>
+		<hr>
 		
         <div class="news">
             <div class="container">
@@ -398,78 +392,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="row news_row">
-
-                    <!-- News Item -->
-                    <div class="col-lg-6 news_col">
-                        <div class="news_item">
-                            <div class="news_image">
-                                <img style="height:236px;margin-left: 35px;" src="./images/pale1.jpg" alt="">								
+                <div class="row text-center">	
+						  <div class="col-md-3"></div>
+						  <div class="col-md-6">
+						  
+							<div class="row" style="justify-content: center;">
+							   <div class="col-lg-5">
+								<div data-toggle="modal" data-target="#modalPalestrante1">
+								  <img class="avatar" height="150" width="150" src="./images/pale1.jpg">
+								  <p class="ng-binding" style="font-size: 16px;font-weight: 600;">Luis Miguel Dias Caetano</p>
+								</div>
+								</div>
+								 <div class="col-lg-5">
+								<div data-toggle="modal" data-target="#modalPalestrante2">
+								  <img class="avatar" height="150" width="150" src="./images/pale2.jpg">
+								  <p class="ng-binding" style="font-size: 16px;font-weight: 600;"> Maria Elizabeth Bianconcini</p>
+								</div>	
+								</div>	
 							</div>	
-							<div style="float: right;margin-top: -211px;margin-right: 32px;width: 289px;height: 0px;">								
-								<h3 style="color:black"> Luis Miguel Dias Caetano </h3>
-								<p style="text-align: justify;">
-									Licenciado em Gestão de Empresas, Mestre em Comportamento Organizacional, Doutor em Educação e Pós-Doutor em Ensino. 
-									Atualmente é professor adjunto no Instituto de Ciências Sociais Aplicadas da Universidade da Integração Internacional 
-									da Lusofonia Afro-Brasileira,   atuando no Curso 
-								</p>								
-							</div>
-                            <div class="news_content" style="padding-top: 5px !important;">
-                                <div class="news_text" style="margin-top: 0px !important">
-                                    <p style="text-align: justify;">
-										de Administração Pública nas áreas de Relações Internacionais, 
-										Comportamento Organizacional, Inovação e Criatividade. Em termos de pesquisa, concentra a sua atividade nas áreas da 
-										Inovação Tecnológica, Sistemas de Informação, Tecnologia Educativa e Políticas Públicas na Educação. Autor de artigos 
-										científicos e capítulos de livros nas áreas de ensino, inovação e gestão pública. Colaborou na organização das obras 
-										"Unilab e a integração cultural lusófona: tribos, povos e nacionalidades em uma universalidade" e "Pluralidade 
-										cultural brasileira: aspectos conceituais e contextuais". Tem exercido cargos nas áreas de Gestão do Ensino Superior, 
-										Implementação de Sistemas de Informação, Gestão de Projetos, Tecnologias Educativas, Formação de Professores e 
-										Projetos de Cooperação para o Desenvolvimento na Comunidade de Países de Língua Portuguesa (CPLP). Tem atuado em 
-										projetos internacionais como formador, pesquisador e consultor em países como Brasil, Guiné-Bissau, Cabo Verde, 
-										Moçambique, Espanha e Honduras. Regularmente dinamiza várias palestras, cursos e workshops nas áreas de Inovação, 
-										Técnicas de Comunicação em Público, Criatividade nas Organizações, Tecnologias na Pesquisa e Gestão de Pessoas. 
-										Colabora ainda em várias atividades de pesquisa, produção científica e extensão com a Universidade de Santiago 
-										(Cabo Verde), Universidade do Estado do Rio Grande do Norte (Brasil), Universidade Federal de Santa Maria (Brasil), 
-										Universidade Nacional da Costa Rica, Universidade Pedagógica Nacional Francisco Morazan (Honduras), Universidade 
-										Tecnológica do Chile e e a Universidade de Aveiro (Portugal).
-                                    </p>
-                                </div>
-                            </div>
-                            <!--<div class="news_button"><a href="blog.html">Continuar lendo</a></div>-->
-                        </div>
-                    </div>
-
-                    <!-- News Item -->
-                    <div class="col-lg-6 news_col">
-                        <div class="news_item">
-                            <div class="news_image">
-                                <img style="height:236px;margin-left: 35px;" src="./images/pale2.jpg" alt="">								
-							</div>	
-							<div style="float: right;margin-top: -214px;margin-right: 32px;width: 289px;height: 0px;">								
-								<h3 style="color:black"> Maria Elizabeth Bianconcini Trindade Morato Pinto de Almeida </h3>
-								<p style="text-align: justify;">
-									Professora associada da Pontifícia Universidade Católica de São Paulo (PUC-SP), 
-								    Livre docente em Educação e Tecnologia (PUC-SP, 2019), Doutora em Educação (Currículo) 
-								    (PUC-SP, 2000), mestra
-								</p>								
-							</div>
-                            <div class="news_content" style="padding-top: 5px !important;height: 672px;">
-                                <div class="news_text" style="margin-top: 0px !important">
-                                    <p style="text-align: justify;">
-                                       
-									   do em Educação (Supervisão: Currículo)(PUC-SP, 1996),  graduação em Matemática pela Universidade Estadual Paulista Júlio de Mesquita Filho (1973). 
-									   Membro do Comitê Assessor da área de Educação do Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq, 2014 a julho, 2017), 
-									   pesquisador produtividade PQ 1C do CNPq, consultor/parecerista ad hoc do CNPq, CAPES, FAPESP, líder do grupo de pesquisa Formação de educadores 
-									   com suporte em meio digital, certificado em 2003. Coordenou o Programa de Pós-Graduação em Educação: Currículo, da PUC-SP (2009-2013), 
-									   atual vice-coordenadora desse Programa Tem experiência em Educação e Tecnologias, com pesquisas e publicações sobre currículo e tecnologias,
-									   educação a distância, tecnologias e formação de professores, web currículo, cultura digital e educação, narrativa digital.
-                                    </p>
-                                </div>
-                            </div>
-                            <!--<div class="news_button"><a href="blog.html">Continuar lendo</a></div>-->
-                        </div>
-                    </div>
-
+								
+						  </div>
+						  <div class="col-md-3"></div>
+             
                 </div>
             </div>
         </div>
@@ -540,10 +484,9 @@
 					</div>
                 </div>
             </div>
-        </div>
+			</div>
 		</div>
-				
-				
+								
 		<div class="intro" id="apresentacao">
             <div class="container">
                 <div class="row">
@@ -705,7 +648,68 @@
             </div>
         </footer>
 
-    </div>
+	</div>
+		
+	<!-- Modal -->
+	<div class="modal fade" id="modalPalestrante1"  tabindex="-1" role="dialog" aria-labelledby="abrirModalPalestrante1" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h4 class="modal-title" id="exampleModalLongTitle">Luis Miguel Dias Caetano</h4>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body" style="text-align: justify;">
+			Licenciado em Gestão de Empresas, Mestre em Comportamento Organizacional, Doutor em Educação e Pós-Doutor em Ensino. 
+			Atualmente é professor adjunto no Instituto de Ciências Sociais Aplicadas da Universidade da Integração Internacional 
+			da Lusofonia Afro-Brasileira, atuando no Curso de Administração Pública nas áreas de Relações Internacionais, 
+			Comportamento Organizacional, Inovação e Criatividade. Em termos de pesquisa, concentra a sua atividade nas áreas da 
+			Inovação Tecnológica, Sistemas de Informação, Tecnologia Educativa e Políticas Públicas na Educação. Autor de artigos 
+			científicos e capítulos de livros nas áreas de ensino, inovação e gestão pública. Colaborou na organização das obras 
+			"Unilab e a integração cultural lusófona: tribos, povos e nacionalidades em uma universalidade" e "Pluralidade 
+			cultural brasileira: aspectos conceituais e contextuais". Tem exercido cargos nas áreas de Gestão do Ensino Superior, 
+			Implementação de Sistemas de Informação, Gestão de Projetos, Tecnologias Educativas, Formação de Professores e 
+			Projetos de Cooperação para o Desenvolvimento na Comunidade de Países de Língua Portuguesa (CPLP). Tem atuado em 
+			projetos internacionais como formador, pesquisador e consultor em países como Brasil, Guiné-Bissau, Cabo Verde, 
+			Moçambique, Espanha e Honduras. Regularmente dinamiza várias palestras, cursos e workshops nas áreas de Inovação, 
+			Técnicas de Comunicação em Público, Criatividade nas Organizações, Tecnologias na Pesquisa e Gestão de Pessoas. 
+			Colabora ainda em várias atividades de pesquisa, produção científica e extensão com a Universidade de Santiago 
+			(Cabo Verde), Universidade do Estado do Rio Grande do Norte (Brasil), Universidade Federal de Santa Maria (Brasil), 
+			Universidade Nacional da Costa Rica, Universidade Pedagógica Nacional Francisco Morazan (Honduras), Universidade 
+			Tecnológica do Chile e e a Universidade de Aveiro (Portugal).
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="modalPalestrante2"  tabindex="-1" role="dialog" aria-labelledby="abrirModalPalestrante1" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h4 class="modal-title" id="exampleModalLongTitle">Maria Elizabeth Bianconcini</h4>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body" style="text-align: justify;">
+			Professora associada da Pontifícia Universidade Católica de São Paulo (PUC-SP), 
+			Livre docente em Educação e Tecnologia (PUC-SP, 2019), Doutora em Educação (Currículo) 
+			(PUC-SP, 2000), mestra do em Educação (Supervisão: Currículo)(PUC-SP, 1996),  graduação em Matemática pela Universidade Estadual Paulista Júlio de Mesquita Filho (1973). 
+		   Membro do Comitê Assessor da área de Educação do Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq, 2014 a julho, 2017), 
+		   pesquisador produtividade PQ 1C do CNPq, consultor/parecerista ad hoc do CNPq, CAPES, FAPESP, líder do grupo de pesquisa Formação de educadores 
+		   com suporte em meio digital, certificado em 2003. Coordenou o Programa de Pós-Graduação em Educação: Currículo, da PUC-SP (2009-2013), 
+		   atual vice-coordenadora desse Programa Tem experiência em Educação e Tecnologias, com pesquisas e publicações sobre currículo e tecnologias,
+		   educação a distância, tecnologias e formação de professores, web currículo, cultura digital e educação, narrativa digital.
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>
