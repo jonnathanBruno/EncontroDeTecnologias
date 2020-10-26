@@ -1,495 +1,262 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="model" class="ng-scope js-focus-visible" data-js-focus-visible="">
-<head>
-
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
-	<style class="vjs-styles-defaults">
-      .video-js {
-        width: 300px;
-        height: 150px;
-      }
-
-      .vjs-fluid {
-        padding-top: 56.25%
-      }
-    </style>
-	<style type="text/css">
-			@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}
-	</style>	
-	
-    <title>SEEC</title>
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./arquivos/bootstrap.min.css">
-    <link href="./arquivos/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./arquivos/main_styles.css">
-    <link rel="stylesheet" type="text/css" href="./arquivos/responsive.css">
-	
-
-    <link rel="stylesheet" href="./arquivos/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
-
-    <link href="./arquivos/loading.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>		
-	<style type="text/css">
-.avatar{
--webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  border: 1px solid white;
-}	
-	
-@font-face {
-  font-weight: 400;
-  font-style:  normal;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: 400;
-  font-style:  italic;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Italic.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: 500;
-  font-style:  normal;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Medium.woff2') format('woff2');
-}
-@font-face {
-  font-weight: 500;
-  font-style:  italic;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-MediumItalic.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: 700;
-  font-style:  normal;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Bold.woff2') format('woff2');
-}
-@font-face {
-  font-weight: 700;
-  font-style:  italic;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BoldItalic.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: 900;
-  font-style:  normal;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Black.woff2') format('woff2');
-}
-@font-face {
-  font-weight: 900;
-  font-style:  italic;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BlackItalic.woff2') format('woff2');
-}</style></head>
-
-
-<body ng-controller="controlador" class="ng-scope">
-
-    <div class="super_container">
-	
-        <div class="home">
-            <div class="home_slider_container">
-				<img src="images/fundoteste.png" style="width:100%;height:100%">
-            </div>
-
-            <!-- Header -->
-
-            <header class="header">
-
-                <!-- Top Bar -->
-                <div class="top_bar">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <div class="top_bar_container d-flex flex-row align-items-center justify-content-start">
-                                    <div class="logo_container">
-                                        <div class="logo">
-                                            <a href="http://www.educacao.rn.gov.br/">
-                                                <div class="logo_img"><img id="logo" style="margin-top: 0px;width: 170px; margin: -22px" src="http://adcon.rn.gov.br/ACERVO/seec/IMG/IMG000000000052395.PNG" alt=""></div>
-                                            </a>
-                                            <h3 style="font-size: 20px;margin: -10px 0px 0 80px;color: #fff;text-decoration: none;text-shadow: 1px 1px 5px #004581;">Secretaria de Estado da Educação, da Cultura, do Esporte e do Lazer</h3>
-                                        </div>
-                                    </div>
-                                    <div class="top_bar_content ml-auto">
-
-                                        <div class="register_login">
-                                            <div class="" style="display: inline-block;vertical-align:middle;">
-                                                <div class="link_button home_slider_button" style="margin:0;background:rgba(249, 228, 38, 1);width:220px;"><a href="" target="_blank" data-type="external">Inscreva-se</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="burger">
-                                        <i class="fa fa-bars" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Main Menu -->
-                <div class="main_menu">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <div class="main_menu_container d-flex flex-row align-items-center justify-content-start">
-                                    <div class="main_menu_content">
-                                        <ul class="main_menu_list">
-                                            <li>
-                                                <a href="#apresentacao">
-                                                  Apresentação
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="http://www.ipragas.com.br/funcionalidades.html">
-                                                    Submissão
-                                                </a>
-                                            </li>
-                                            <li class="hassubs">
-                                                <a href="http://www.ipragas.com.br/comece_usar.html">
-                                                    Certificação
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="">
-                                                    Fale Conosco
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="main_menu_contact ml-auto">
-                                        <div class="main_menu_search">
-                                            <div class="main_menu_search_button">
-                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 512 512" enable-background="new 0 0 512 512" width="15px" height="15px">
-                                                    <g>
-                                                        <path class="mag_path" d="M495,466.2L377.2,348.4c29.2-35.6,46.8-81.2,46.8-130.9C424,103.5,331.5,11,217.5,11C103.4,11,11,103.5,11,217.5   S103.4,424,217.5,424c49.7,0,95.2-17.5,130.8-46.7L466.1,495c8,8,20.9,8,28.9,0C503,487.1,503,474.1,495,466.2z M217.5,382.9   C126.2,382.9,52,308.7,52,217.5S126.2,52,217.5,52C308.7,52,383,126.3,383,217.5S308.7,382.9,217.5,382.9z" fill="#f4f4f8"></path>
-                                                    </g>
-                                                </svg>
-                                            </div>
-                                            <div class="main_menu_search_content">
-                                                <form action="http://www.ipragas.com.br/#" class="ng-pristine ng-valid">
-                                                    <input class="search_input" type="search" placeholder="Keyword" required="required">
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Menu -->
-
-                <div class="menu">
-                    <ul class="menu_list">
-						<li class="menu_item">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <a href="">Apresentação</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="menu_item">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <a href="">Submissão</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="menu_item">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <a href="">Certificação</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="menu_item">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <a href="">Fale conosco</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>SEEC</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="index.html"><img src="http://adcon.rn.gov.br/ACERVO/seec/IMG/IMG000000000052395.PNG"></a>
+                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#apresentacao">Apresentação</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#sub">Submissão</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Certificação</a></li>
+						<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="comissao.html">Comissão</a></li>
+						<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Fale Conosco</a></li>
+						<li class="nav-item mx-0 mx-lg-1"><button type="button" class="btn btn-warning btn-lg">Inscreva-se</button></li>
                     </ul>
                 </div>
-            </header>
-        </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead text-white text-center" style="background-color: #005baa">
+			<img src="images/fundoteste.png" style="width:100%;height:100%">
+        </header>
 
-        <div class="intro" id="apresentacao">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="intro_image text-lg-right text-center"><img style="height:630px" src="images/1.jpg" alt=""></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="intro_content">
-                            <div class="intro_title_container">
-                                <div class="intro_subtitle">ETERN</div>
-                                <h1 class="intro_title">Apresentação</h1>
-                            </div>
-                            <div class="intro_text">
-                                <p style="text-align: justify;font-size: 16px;">
-                                    Sejam bem-vindos ao I Encontro de Tecnologias Educacionais do Rio Grande do Norte (I ETERN), à Secretaria de Estado, da Educação, da Cultura, do Esporte e do Lazer!
+
+		<!-- Apresentação -->
+		<section class="page-section">
+			<div class="container marketing">
+				<div class="row featurette">
+				  <div class="col-md-7 order-md-2">
+						<div class="col">
+							<div class="intro_subtitle">ETERN</div>
+							<h1 class="intro_title">Apresentação</h1>
+						</div>
+						<div class="col">
+							<p style="text-align: justify;font-size: 16px;" class="lead">Sejam bem-vindos ao I Encontro de Tecnologias Educacionais do Rio Grande do Norte (I ETERN), à Secretaria de Estado, da Educação, da Cultura, do Esporte e do Lazer!
 									Com o objetivo de se reinventar, de refletir e de compartilhar experiências pedagógicas, o I ETERN foi idealizado em uma perspectiva totalmente a distância para que possamos dialogar e compartilhar as experiências vividas ao longo de 2020 nesse atual contexto de isolamento, provocado pelo Covid-19.
 									O I ETERN é uma iniciativa da Secretaria de Educação, da Cultura, do Esporte e do Lazer por meio do NEADTEC/GPD. Esta é uma ação conjunta com os Núcleos de Tecnologias Educacionais circunscritos às 16 Diretorias Regionais de Educação do Estado e com a participação de agentes de escolas públicas estaduais. Em sua primeira edição traz a temática “Ressignificando Saberes - inovando práticas pedagógicas” tendo por foco as interfaces entre os diferentes componentes curriculares, bem como a discussão de uma prática inclusiva sob o viés tecnológico.
-									Desejamos a todos ótimo I ETERN e esperamos contribuir para as discussões no bojo da tecnologia digital do Estado e sua inserção pedagógica no âmbito escolar.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>			
-        </div>
-		
-        <div class="intro">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="intro_content">
-                            <div class="intro_title_container">
-                                <div class="intro_subtitle">ETERN</div>
-                                <h1 class="intro_title">Objetivo</h1>
-                            </div>
-                            <div class="intro_text">
-                                <p style="text-align: justify;font-size: 16px;">
-                                   Proporcionar a agentes educacionais troca de experiências com inovações tecnológicas no cotidiano escolar e o compartilhamento de saberes com o uso dessas tecnologias digitais de informação e de comunicação na prática pedagógica.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="intro_image text-lg-right text-center"><img style="margin-left:70px;" src="./images/3.png" alt=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-		
-		<div class="container">
-		<div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-xs-12 col-sm-9">		  
-		    <div class="intro_title_container">
-				<div class="intro_subtitle">ETERN</div>
-				<h1 class="intro_title">Comissão Organizadora do I ETERN - 2020</h1>
+									Desejamos a todos ótimo I ETERN e esperamos contribuir para as discussões no bojo da tecnologia digital do Estado e sua inserção pedagógica no âmbito escolar.	</p>
+						</div>
+				  </div>
+				  <div class="col-md-5 order-md-1">
+					<img style="height: 540px;" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="700"src="images/1.jpg" alt="">					
+				  </div>
+				</div>
 			</div>
-				<img  style="width: 1145px; height: 240px; margin-bottom: 25px;" src="images/5.png" alt="">   
-				<div class="row" style="width:1175px">
-				<div class="col-xs-6 col-lg-4">
-					  <h3 style="color: black;">Coordenação geral</h3>
-					  <p>Márcia Gurgel<br>Ana Paula de Oliveira Flor <br> Elisângela Tavares Dias <br> Zelda Simplicio de Sales Caldas</p>
-					</div>
-				<div class="col-xs-6 col-lg-4">
-				  <h3 style="color: black;">Secretaria do Evento</h3>
-				  <p> Herlane De Lourdes Silva<b> - Coordenadora</b><br> 
-					Maria Luziene de Medeiros<br>
-					Cibelle Barros de Almeida Valença</p>
-				</div>
-				<div class="col-xs-6 col-lg-4">
-					<h3 style="color: black;">Comitê de Desenvolvimento/Design</h3>
-					<p>
-					Yuri Eduardo de Andrade Barros<b> - Coordenador</b><br>
-					 Herlane De Lourdes Silva Candido <br>
-					 Jonnathan Bruno Ribeiro De Lima 
-					 </p>
-				</div>
-				<div class="col-xs-6 col-lg-4">
-				  <h3 style="color: black;">Comitê de Oficinas</h3>
-				  <p> Regina Celli Fernandes de Araújo <b> - Coordenadora </b><br>
-						Cyro Andreolle Lima Soares <br>
-						Francisco Wallyson Bezerra da Silva <br>
-						Luciana da Silva Morais <br>
-						Márcia Mychelle Nogueira do Nascimento <br>
-						Joaquim Inácio de Azevedo Neto <br>
-						Rummening Marinho dos Santos <br>
-						Sônia Maria Pereira</p>
-				</div>
-				<div class="col-xs-6 col-lg-4">
-				  <h3 style="color: black;">Comitê de Avaliação</h3>
-				  <p>Elisângela Tavares Dias <b> - Coordenadora </b><br>
-					Cibelle Cristina Cristina Barros de Almeida Valença <br>
-					Maria Aldeiza da Silva <br>
-					Maria Luziene de Medeiros <br>
-					Márcia Mychelle Nogueira do Nascimento <br>
-					Mifra Angélica Chaves da Costa <br>
-					Regina Lúcia Alves da Costa <br>
-					Zelda Simplicio de Sales Caldas <br></p>
-				</div>
-				<div class="col-xs-6 col-lg-4">
-				  <h3 style="color: black;">Comitê de Inscrições</h3>
-				  <p> Nilvana Januário <b> - Coordenadora </b><br>
-					Yuri Eduardo de Andrade Barros Freire <br>
-					Vanessinha do GPD</p>
-				</div>
-				<div class="col-xs-6 col-lg-4">
-				  <h3 style="color: black;">Comitê de Divulgação/Mídias/Sites/Redes Sociais</h3>
-				  <p>Carlos Gomes  <b> - Coordenador </b> <br>
-					Danilo Bezerra Vieira <br>
-					Leilton de Souza Lima <br></p>
-				</div>
-				<div class="col-xs-6 col-lg-4">
-				  <h3 style="color: black;">Comitê de Organização</h3>
-				  <p>Zelda Simplicio de Sales Caldas <b> - Coordenadora </b> <br>
-					Ana Paula dos Santos Oliveira Flor <br>
-					Carlos Gomes <br>
-					Cibelle Cristina Barros de Almeida  <br>
-					Cyro Andreolle Lima Soares <br>
-					Elisângela Tavares Dias </p>
-				</div>
-				<div class="col-xs-6 col-lg-4">
-
-			  <h3 style="color: black;">Comitê de Organização</h3>
-			  <p>
-				Francisco Wallyson Bezerra da Silva <br>
-				Joaquim Inácio de Azevedo Neto <br>
-				Luciana da Silva Morais <br>
-				Márcia Mychelle Nogueira do Nascimento <br>
-				Regina Celli Fernandes de Araújo <br>
-				Rummening Marinho dos Santos <br>
-				Sônia Maria Pereira	</p>
-            </div>
-				</div>
-	     </div><!--/row-->
-        </div><!--/.col-xs-12.col-sm-9-->
-
-        </div>
-		<hr>
+        </section>
 		
-        <div class="news">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="section_title_container text-center">
-                            <div class="section_subtitle">I ETERN</div>
-                            <div class="section_title">Palestrantes do Evento</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row text-center">	
-						  <div class="col-md-3"></div>
-						  <div class="col-md-6">
-						  
-							<div class="row" style="justify-content: center;">
-							   <div class="col-lg-5">
-								<div data-toggle="modal" data-target="#modalPalestrante1">
-								  <img class="avatar" height="150" width="150" src="./images/pale1.jpg">
-								  <p class="ng-binding" style="font-size: 16px;font-weight: 600;">Luis Miguel Dias Caetano</p>
-								</div>
-								</div>
-								 <div class="col-lg-5">
-								<div data-toggle="modal" data-target="#modalPalestrante2">
-								  <img class="avatar" height="150" width="150" src="./images/pale2.jpg">
-								  <p class="ng-binding" style="font-size: 16px;font-weight: 600;"> Maria Elizabeth Bianconcini</p>
-								</div>	
-								</div>	
-							</div>	
-								
-						  </div>
-						  <div class="col-md-3"></div>
-             
-                </div>
-            </div>
-        </div>
-		
-		<div class="news">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="section_title_container text-center">
-                            <div class="section_subtitle">ETERN</div>
-                            <div class="section_title">Eixos temáticos</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row news_row">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="card">
-							  <img class="card-img-top" style="height: 220px;" src="images/eixo1.jpg" alt="Imagem de capa do card">
-							  <div class="card-body">
-								<h5 class="news_title">ET 1. Tecnologias no ensino remoto: superando desafios no ensino. </h5>
-							  </div>
-							</div>
-						  </div>
-						<div class="col-sm-4">
-							<div class="card">
-							  <img class="card-img-top" style="height: 220px;" src="images/eixo2.png" alt="Imagem de capa do card">
-							  <div class="card-body">
-								<h5 class="news_title">ET 2. Tecnologias integradas ao currículo no processo de aprendizagem. </h5>
-							  </div>
-							</div>
-					    </div>
-						<div class="col-sm-4">
-							<div class="card">
-							  <img class="card-img-top" style="height: 220px;" src="images/eixo3.jpg" alt="Imagem de capa do card">
-							  <div class="card-body">
-								<h5 class="news_title">ET 3. Acessibilidade e inclusão com uso de tecnologias digitais.</h5>
-							  </div>
-							</div>
+		<!-- Objetivo -->
+		<section class="page-section" style="background-color: #efefef75">
+			<div class="container marketing">
+				<div class="row featurette">				
+				   <div class="col-md-7">
+						<div class="col">
+							<div class="intro_subtitle">ETERN</div>
+							<h1 class="intro_title">Objetivo</h1>
+						</div>
+						<div class="col">
+							<p style="text-align: justify;font-size: 16px;" class="lead">  Proporcionar a agentes educacionais troca de experiências com inovações tecnológicas no cotidiano escolar e o compartilhamento de saberes com o uso dessas tecnologias digitais de informação e de comunicação na prática pedagógica.</p>
+						</div>
+					</div>  
+					  <div class="col-md-5">
+						<img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="700"src="images/3.png" alt="">					
 					  </div>
-					</div>
-				<div class="row news_row">
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="card">
-							  <img class="card-img-top" style="height: 220px;" src="images/eixo4.png" alt="Imagem de capa do card">
-							  <div class="card-body">
-								<h5 class="news_title">ET 4. Sistemas, ambientes virtuais de aprendizagem e plataformas digitais como meios de integração professor-aluno.</h5>
-							  </div>
+				</div>
+			<hr class="featurette-divider">
+			</div>
+        </section>
+          
+		<!-- Palestrantes -->
+        <section class="page-section">
+			<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="intro_subtitle">ETERN</div>
+					<h1 class="intro_title">Palestrantes do Evento</h1>
+				</div>
+			</div>
+			<div class="row text-center">	
+					<div class="col-md-3"></div>
+					<div class="col-md-6">						  
+						<div class="row" style="justify-content: center;">
+						   <div class="col-lg-5">
+							<div data-toggle="modal" data-target="#modalPalestrante1">
+							  <img class="avatar" height="150" width="150" src="./images/pale1.jpg">
+							  <p class="ng-binding" style="font-size: 18px;font-weight: 600;">Luis Miguel Dias Caetano</p>
 							</div>
+							</div>
+							 <div class="col-lg-5">
+							<div data-toggle="modal" data-target="#modalPalestrante2">
+							  <img class="avatar" height="150" width="150" src="./images/pale2.jpg">
+							  <p class="ng-binding" style="font-size: 18px;font-weight: 600;"> Maria Elizabeth Bianconcini</p>
+							</div>	
+							</div>	
+						</div>									
+				    </div>
+					<div class="col-md-3"></div>          
+				</div>							
+			</div>	
+        </section>
+	  
+	    <!-- Orientações aos Autores -->
+		<section class="page-section">
+			<div class="container marketing">
+				<div class="row featurette">
+				  <div class="col-md-7 order-md-2">
+						<div class="col">
+							<div class="intro_subtitle">ETERN</div>
+							<h1 class="intro_title">Orientações aos Autores</h1>
+						</div>
+						<div class="col">
+							<p style="text-align: justify;font-size: 16px;" class="lead">Todos os autores têm que se inscrever no I ETERN para receberem certificado de participação, mesmo os que não forem apresentar trabalho;
+									Se houver mais de um autor, apenas um deve apresentar o trabalho ao vivo como também, fazer um vídeo da apresentação, conforme orientações do item 3 desta seção.
+									O autor que for apresentar o trabalho ao vivo, deve fazer um vídeo com o teor de sua apresentação e enviar para o e-mail: <b>seec.etern@gmail.com</b> até o dia:<b>30/11/2020</b>.</p>
+						</div>
+				  </div>
+				  <div class="col-md-5 order-md-1">
+					<img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="700"src="images/2.jpg" alt="">					
+				  </div>
+				</div>
+			</div>
+        </section>
+	    
+		<!-- Informações Importantes -->
+		<section class="page-section" style="background-color: #efefef75">
+			<div class="container marketing">
+				<div class="row featurette">				
+				   <div class="col-md-7">
+						<div class="col">
+							<div class="intro_subtitle">ETERN</div>
+							<h1 class="intro_title">Informações Importantes</h1>
+						</div>
+						<div class="col">
+							<p style="text-align: justify;font-size: 16px;" class="lead">   Os autores dos artigos, resumos expandidos/relatos de experiências aprovados podem ser convidados para publicarem seus trabalhos em um E-book do I ETERN. Desse modo, é importante observar as normas conforme formato escolhido pelos autores (professor, gestor, coordenador e estudante).
+									<br><li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">Se for resumo expandido, não devem conter no corpo do texto  imagens, fotos, tabelas ou figuras devido ao tamanho do documento. Este, deve ter entre 4 e 6 páginas no total, contendo: o título, nome dos autores por ordem de autoria/instituição/e-mails, resumo, palavras-chave, introdução, arcabouço teórico, metodologia, resultados e discussão, considerações finais e referências.</li>
+									<br><li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">Se for artigo, este deve conter de 10 a 15 páginas e pode ter figuras, imagens, tabelas e quadros que possam ilustrar o conteúdo escrito.</li>
+									<br><li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">Se for uma proposta produzida por aluno(com a participação de um professor), deverá vir no gênero Resumo Expandido, considerando o item A e com a possibilidade de mostrar URL com as propostas desenvolvidas (ou seja, o endereço eletrônico onde esteja o vídeo, o App, o Simulador, etc., já publicado.</li></p>
+						</div>
+					</div>  
+					  <div class="col-md-5">
+						<img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="700"src="images/4.png" alt="">					
+					  </div>
+				</div>
+			</div>
+        </section>
+		
+		<!-- Eixos temáticos -->
+		<div class="intro" >
+			<div class="container">
+				<div class="row">
+					<div class="intro_title_container">
+						<div class="intro_subtitle">ETERN</div>
+						<h1 class="intro_title">Eixos temáticos</h1>
+					</div>
+				</div>
+				<div class="row news_row">
+					<div class="col-sm-4">
+						<div class="card">
+						  <img class="card-img-top" style="height: 220px;" src="images/eixo1.jpg" alt="Imagem de capa do card">
+						  <div class="card-body">
+							<h5 class="news_title">ET 1. Tecnologias no ensino remoto: superando desafios no ensino. </h5>
 						  </div>
-						<div class="col-sm-4">
-							<div class="card">
-							  <img class="card-img-top" style="height: 220px;" src="images/eixo5.jpg" alt="Imagem de capa do card">
-							  <div style="height:188px" class="card-body">
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="card">
+						  <img class="card-img-top" style="height: 220px;" src="images/eixo2.png" alt="Imagem de capa do card">
+						  <div class="card-body">
+							<h5 class="news_title">ET 2. Tecnologias integradas ao currículo no processo de aprendizagem. </h5>
+						  </div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="card">
+						  <img class="card-img-top" style="height: 220px;" src="images/eixo3.jpg" alt="Imagem de capa do card">
+						  <div  class="card-body">
+							<h5 class="news_title">ET 3. Acessibilidade e inclusão com uso de tecnologias digitais.</h5>
+						  </div>
+						</div>
+					</div>
+				</div>	
+				
+				<div class="row news_row">
+					<div class="col-sm-4">
+						<div class="card">
+						  <img class="card-img-top" style="height: 220px;" src="images/eixo4.png" alt="Imagem de capa do card">
+						  <div class="card-body">
+							<h5 class="news_title">ET 4. Sistemas, ambientes virtuais de aprendizagem e plataformas digitais como meios de integração professor-aluno.</h5>
+						  </div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="card">
+						  <img class="card-img-top" style="height: 220px;" src="images/eixo5.jpg" alt="Imagem de capa do card">
+							  <div class="card-body">
 								<h5 class="news_title">ET 5. Avaliação online na educação básica: quais intervenções podemos propor em ensino híbrido?</h5>
 							  </div>
-							</div>
-					    </div>
-						<div class="col-sm-4">
-							<div class="card">
-							  <img class="card-img-top" style="height: 220px;" src="images/eixo6.png" alt="Imagem de capa do card">
-							  <div style="height:188px" class="card-body">
-								<h5 class="news_title">ET 6. O minimalismo tecnológico: uma reflexão sustentável equilibrada.</h5>
-							  </div>
-							</div>
-					  </div>
+						</div>
 					</div>
-                </div>
-            </div>
-			</div>
+					<div class="col-sm-4">
+								<div class="card">
+								  <img class="card-img-top" style="height: 220px;" src="images/eixo6.png" alt="Imagem de capa do card">
+								  <div class="card-body">
+									<h5 class="news_title">ET 6. O minimalismo tecnológico: uma reflexão sustentável equilibrada.</h5>
+								  </div>
+								</div>
+						  </div>
+				</div>
+			</div>	
 		</div>
-								
-		<div class="intro" id="apresentacao">
-            <div class="container">
-                <div class="row">
+        
+		<!-- Eixos temáticos -->
+		<section class="page-section">
+			<div class="container marketing">
+				<div class="row featurette">
+				  <div class="col-md-7 order-md-2">
+						<div class="col">
+							<div class="intro_subtitle">ETERN</div>
+							<h1 class="intro_title">Da Apresentação dos Vídeos/Slides</h1>
+						</div>
+						<div class="col">
+							<p style="text-align: justify;font-size: 16px;" class="lead"> Para a apresentação é Importante observar que:
+								  <br>Deve ser escrita em Português e conter:
+								  <br>Título (igual ao do resumo submetido), Autores (em ordem de autoria); Instituição (por onde está submetendo o trabalho), e-mails dos autores, Resumo, Introdução, Objetivos, Metodologia, Resultados (alcançados ou esperados), Relato de Experiência, Considerações Finais e Referências.
+									<li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">As informações devem ter clareza e ser organizadas na sequência do trabalho, de forma que as ideias centrais sejam facilmente compreendidas.</li>
+									<li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">O texto deve ser legível, levando em conta que será apresentado em uma transmissão ao vivo e também, ser gravado  em vídeo.</li>
+									<li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">O modelo de apresentação é uma criação livre dos autores e pode utilizar qualquer recurso tecnológico e o tempo máximo é de até 8 minutos. Para isso, organize de forma a não ultrapassar o tempo especificado nessa orientação. </li>
+									<li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">Na apresentação oral pode conter figuras, imagens, tabelas e quadros que possam ilustrar o conteúdo escrito.</li>
+									<li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">Sua apresentação deve ter impreterivelmente até 10 slides e cumprir o tempo recomendado.</li></p>
+						</div>
+				  </div>
+				  <div class="col-md-5 order-md-1">
+					<img style="height: 638px;" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="700"src="images/6.jpg" alt="">					
+				  </div>
+				</div>
+			</div>
+        </section>
+		
+		  
+		<!-- Submissão de Trabalhos -->
+		<div class="intro" id="sub">
+			<div class="container">
+				<div class="row">
 					<div class="intro_title_container">
 						<div class="intro_subtitle">ETERN</div>
 						<h1 class="intro_title">Submissão de Trabalhos</h1>
@@ -524,192 +291,113 @@
 						</tr>											 
 					  </tbody>
 				</table>
-                </div>
-            </div>			
-        </div>
-			
-	    <div class="intro" id="apresentacao">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="intro_image text-lg-right text-center"><img style="height:520px" src="images/2.jpg" alt=""></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="intro_content">
-                            <div class="intro_title_container">
-                                <div class="intro_subtitle">ETERN</div>
-                                <h1 class="intro_title">Orientações aos Autores</h1>
-                            </div>
-                            <div class="intro_text">
-                                <p style="text-align: justify;font-size: 16px;">
-                                    Todos os autores têm que se inscrever no I ETERN para receberem certificado de participação, mesmo os que não forem apresentar trabalho;
-									Se houver mais de um autor, apenas um deve apresentar o trabalho ao vivo como também, fazer um vídeo da apresentação, conforme orientações do item 3 desta seção.
-									O autor que for apresentar o trabalho ao vivo, deve fazer um vídeo com o teor de sua apresentação e enviar para o e-mail: <b>seec.etern@gmail.com</b> até o dia:<b>30/11/2020</b>.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>			
-        </div>
+				</div>
+			</div>
+		</div>			
 				
-        <div class="intro">
+        <!-- Footer-->
+        <footer class="footer text-center">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="intro_content">
-                            <div class="intro_title_container">
-                                <div class="intro_subtitle">ETERN</div>
-                                <h1 class="intro_title">Informações Importantes</h1>
-                            </div>
-                            <div class="intro_text">
-                                <p style="text-align: justify;font-size: 16px;">
-                                   Os autores dos artigos, resumos expandidos/relatos de experiências aprovados podem ser convidados para publicarem seus trabalhos em um E-book do I ETERN. Desse modo, é importante observar as normas conforme formato escolhido pelos autores (professor, gestor, coordenador e estudante).
-									<br><li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">Se for resumo expandido, não devem conter no corpo do texto  imagens, fotos, tabelas ou figuras devido ao tamanho do documento. Este, deve ter entre 4 e 6 páginas no total, contendo: o título, nome dos autores por ordem de autoria/instituição/e-mails, resumo, palavras-chave, introdução, arcabouço teórico, metodologia, resultados e discussão, considerações finais e referências.</li>
-									<br><li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">Se for artigo, este deve conter de 10 a 15 páginas e pode ter figuras, imagens, tabelas e quadros que possam ilustrar o conteúdo escrito.</li>
-									<br><li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">Se for uma proposta produzida por aluno(com a participação de um professor), deverá vir no gênero Resumo Expandido, considerando o item A e com a possibilidade de mostrar URL com as propostas desenvolvidas (ou seja, o endereço eletrônico onde esteja o vídeo, o App, o Simulador, etc., já publicado.</li>
-                                </p>
-                            </div>
-                        </div>
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Localização</h4>
+                        <p class="lead mb-0">
+                           Centro Administrativo do Estado
+                            <br />
+                            Av. Senador Salgado Filho, s/n, Lagoa Nova - Natal/RN
+							<br />
+							CEP: 59064-901
+                        </p>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="intro_image text-lg-right text-center"><img style="margin-left:70px;height: 715px;" src="./images/4.png" alt=""></div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <img src="./images/logobranca.png" width="100%" height="100%">
                     </div>
-                </div>
-            </div>
-        </div>
-		
-		<div class="intro" id="apresentacao">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="intro_image text-lg-right text-center"><img style="height:836px" src="images/6.jpg" alt=""></div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="intro_content">
-                            <div class="intro_title_container">
-                                <div class="intro_subtitle">ETERN</div>
-                                <h1 class="intro_title">Da Apresentação dos Vídeos/Slides</h1>
-                            </div>
-                            <div class="intro_text">
-								<p style="text-align: justify;font-size: 16px;">
-                                  Para a apresentação é Importante observar que:
-								  <br>Deve ser escrita em Português e conter:
-								  <br>Título (igual ao do resumo submetido), Autores (em ordem de autoria); Instituição (por onde está submetendo o trabalho), e-mails dos autores, Resumo, Introdução, Objetivos, Metodologia, Resultados (alcançados ou esperados), Relato de Experiência, Considerações Finais e Referências.
-									<br><li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">As informações devem ter clareza e ser organizadas na sequência do trabalho, de forma que as ideias centrais sejam facilmente compreendidas.</li>
-									<br><li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">O texto deve ser legível, levando em conta que será apresentado em uma transmissão ao vivo e também, ser gravado  em vídeo.</li>
-									<br><li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">O modelo de apresentação é uma criação livre dos autores e pode utilizar qualquer recurso tecnológico e o tempo máximo é de até 8 minutos. Para isso, organize de forma a não ultrapassar o tempo especificado nessa orientação. </li>
-									<br><li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">Na apresentação oral pode conter figuras, imagens, tabelas e quadros que possam ilustrar o conteúdo escrito.</li>
-									<br><li style="text-align: justify;font-size: 16px;line-height: 1.92;color: #838383;">Sua apresentação deve ter impreterivelmente até 10 slides e cumprir o tempo recomendado.</li>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>			
-        </div>
-		
-        <footer class="footer">
-			<div class="container">
-                <div class="row">
-					<div class="row news_row">
-						<div class="col-lg-6 news_col">
-							<div class="news_item" style="background: #15191f;">
-								 <a href="#">
-                                    <img src="./images/logobranca.png" width="420px" height="290px">
-                                </a>
-							</div>
-						</div>
-						<div class="col-lg-6 news_col">
-                        <div class="news_item" style="background: #15191f; margin: 70px 105px 0 0;">
-                            <p style="width:300px">Centro Administrativo do Estado
-							<br> Av. Senador Salgado Filho, s/n, Lagoa Nova - Natal/RN. 
-							<br> CEP: 59064-901
-							<br>(84) 3232-1324
-                            <br>seec@rn.gov.br</p>
-                        </div>
-                    </div>
-					</div>
-			   </div>
-            </div>
-			<div class="copyright">
-                <div class="container">
-                    <div class="row">												
-                        <div class="col-md-4 order-md-1 order-2">
-                            <div class="copyright_content d-flex flex-row align-items-center justify-content-start">
-                                <div class="cr">
-                                    Copyright ©
-									<script>document.write(new Date().getFullYear());</script> All rights reserved | SEEC (Secretaria de Estado da Educação, da Cultura, do Esporte e do Lazer)
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">Contato</h4>
+                        <p class="lead mb-0">
+							(84) 3232-1324
+							<br />
+                            seec@rn.gov.br
+                        </p>
                     </div>
                 </div>
             </div>
         </footer>
-
-	</div>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>  Copyright © <script>document.write(new Date().getFullYear());</script> All rights reserved | SEEC (Secretaria de Estado da Educação, da Cultura, do Esporte e do Lazer)</small></div>
+        </div>
 		
-	<!-- Modal -->
-	<div class="modal fade" id="modalPalestrante1"  tabindex="-1" role="dialog" aria-labelledby="abrirModalPalestrante1" aria-hidden="true">
-	  <div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-		  <div class="modal-header">
-			<h4 class="modal-title" id="exampleModalLongTitle">Luis Miguel Dias Caetano</h4>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			  <span aria-hidden="true">&times;</span>
-			</button>
-		  </div>
-		  <div class="modal-body" style="text-align: justify;">
-			Licenciado em Gestão de Empresas, Mestre em Comportamento Organizacional, Doutor em Educação e Pós-Doutor em Ensino. 
-			Atualmente é professor adjunto no Instituto de Ciências Sociais Aplicadas da Universidade da Integração Internacional 
-			da Lusofonia Afro-Brasileira, atuando no Curso de Administração Pública nas áreas de Relações Internacionais, 
-			Comportamento Organizacional, Inovação e Criatividade. Em termos de pesquisa, concentra a sua atividade nas áreas da 
-			Inovação Tecnológica, Sistemas de Informação, Tecnologia Educativa e Políticas Públicas na Educação. Autor de artigos 
-			científicos e capítulos de livros nas áreas de ensino, inovação e gestão pública. Colaborou na organização das obras 
-			"Unilab e a integração cultural lusófona: tribos, povos e nacionalidades em uma universalidade" e "Pluralidade 
-			cultural brasileira: aspectos conceituais e contextuais". Tem exercido cargos nas áreas de Gestão do Ensino Superior, 
-			Implementação de Sistemas de Informação, Gestão de Projetos, Tecnologias Educativas, Formação de Professores e 
-			Projetos de Cooperação para o Desenvolvimento na Comunidade de Países de Língua Portuguesa (CPLP). Tem atuado em 
-			projetos internacionais como formador, pesquisador e consultor em países como Brasil, Guiné-Bissau, Cabo Verde, 
-			Moçambique, Espanha e Honduras. Regularmente dinamiza várias palestras, cursos e workshops nas áreas de Inovação, 
-			Técnicas de Comunicação em Público, Criatividade nas Organizações, Tecnologias na Pesquisa e Gestão de Pessoas. 
-			Colabora ainda em várias atividades de pesquisa, produção científica e extensão com a Universidade de Santiago 
-			(Cabo Verde), Universidade do Estado do Rio Grande do Norte (Brasil), Universidade Federal de Santa Maria (Brasil), 
-			Universidade Nacional da Costa Rica, Universidade Pedagógica Nacional Francisco Morazan (Honduras), Universidade 
-			Tecnológica do Chile e e a Universidade de Aveiro (Portugal).
-		  </div>
-		</div>
-	  </div>
-	</div>
+        <div class="scroll-to-top d-lg-none position-fixed">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+		
+        <!-- Portfolio Modal 1-->
+        	<!-- Modal -->
+			<div class="modal fade" id="modalPalestrante1"  tabindex="-1" role="dialog" aria-labelledby="abrirModalPalestrante1" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h4 class="modal-title" id="exampleModalLongTitle">Luis Miguel Dias Caetano</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body" style="text-align: justify;">
+					Licenciado em Gestão de Empresas, Mestre em Comportamento Organizacional, Doutor em Educação e Pós-Doutor em Ensino. 
+					Atualmente é professor adjunto no Instituto de Ciências Sociais Aplicadas da Universidade da Integração Internacional 
+					da Lusofonia Afro-Brasileira, atuando no Curso de Administração Pública nas áreas de Relações Internacionais, 
+					Comportamento Organizacional, Inovação e Criatividade. Em termos de pesquisa, concentra a sua atividade nas áreas da 
+					Inovação Tecnológica, Sistemas de Informação, Tecnologia Educativa e Políticas Públicas na Educação. Autor de artigos 
+					científicos e capítulos de livros nas áreas de ensino, inovação e gestão pública. Colaborou na organização das obras 
+					"Unilab e a integração cultural lusófona: tribos, povos e nacionalidades em uma universalidade" e "Pluralidade 
+					cultural brasileira: aspectos conceituais e contextuais". Tem exercido cargos nas áreas de Gestão do Ensino Superior, 
+					Implementação de Sistemas de Informação, Gestão de Projetos, Tecnologias Educativas, Formação de Professores e 
+					Projetos de Cooperação para o Desenvolvimento na Comunidade de Países de Língua Portuguesa (CPLP). Tem atuado em 
+					projetos internacionais como formador, pesquisador e consultor em países como Brasil, Guiné-Bissau, Cabo Verde, 
+					Moçambique, Espanha e Honduras. Regularmente dinamiza várias palestras, cursos e workshops nas áreas de Inovação, 
+					Técnicas de Comunicação em Público, Criatividade nas Organizações, Tecnologias na Pesquisa e Gestão de Pessoas. 
+					Colabora ainda em várias atividades de pesquisa, produção científica e extensão com a Universidade de Santiago 
+					(Cabo Verde), Universidade do Estado do Rio Grande do Norte (Brasil), Universidade Federal de Santa Maria (Brasil), 
+					Universidade Nacional da Costa Rica, Universidade Pedagógica Nacional Francisco Morazan (Honduras), Universidade 
+					Tecnológica do Chile e e a Universidade de Aveiro (Portugal).
+				  </div>
+				</div>
+			  </div>
+			</div>
+			
+			<!-- Modal -->
+			<div class="modal fade" id="modalPalestrante2"  tabindex="-1" role="dialog" aria-labelledby="abrirModalPalestrante1" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<h4 class="modal-title" id="exampleModalLongTitle">Maria Elizabeth Bianconcini</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>
+				  </div>
+				  <div class="modal-body" style="text-align: justify;">
+					Professora associada da Pontifícia Universidade Católica de São Paulo (PUC-SP), 
+					Livre docente em Educação e Tecnologia (PUC-SP, 2019), Doutora em Educação (Currículo) 
+					(PUC-SP, 2000), mestra do em Educação (Supervisão: Currículo)(PUC-SP, 1996),  graduação em Matemática pela Universidade Estadual Paulista Júlio de Mesquita Filho (1973). 
+				   Membro do Comitê Assessor da área de Educação do Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq, 2014 a julho, 2017), 
+				   pesquisador produtividade PQ 1C do CNPq, consultor/parecerista ad hoc do CNPq, CAPES, FAPESP, líder do grupo de pesquisa Formação de educadores 
+				   com suporte em meio digital, certificado em 2003. Coordenou o Programa de Pós-Graduação em Educação: Currículo, da PUC-SP (2009-2013), 
+				   atual vice-coordenadora desse Programa Tem experiência em Educação e Tecnologias, com pesquisas e publicações sobre currículo e tecnologias,
+				   educação a distância, tecnologias e formação de professores, web currículo, cultura digital e educação, narrativa digital.
+				  </div>
+				</div>
+			  </div>
+			</div>
 	
-	<!-- Modal -->
-	<div class="modal fade" id="modalPalestrante2"  tabindex="-1" role="dialog" aria-labelledby="abrirModalPalestrante1" aria-hidden="true">
-	  <div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-		  <div class="modal-header">
-			<h4 class="modal-title" id="exampleModalLongTitle">Maria Elizabeth Bianconcini</h4>
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			  <span aria-hidden="true">&times;</span>
-			</button>
-		  </div>
-		  <div class="modal-body" style="text-align: justify;">
-			Professora associada da Pontifícia Universidade Católica de São Paulo (PUC-SP), 
-			Livre docente em Educação e Tecnologia (PUC-SP, 2019), Doutora em Educação (Currículo) 
-			(PUC-SP, 2000), mestra do em Educação (Supervisão: Currículo)(PUC-SP, 1996),  graduação em Matemática pela Universidade Estadual Paulista Júlio de Mesquita Filho (1973). 
-		   Membro do Comitê Assessor da área de Educação do Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq, 2014 a julho, 2017), 
-		   pesquisador produtividade PQ 1C do CNPq, consultor/parecerista ad hoc do CNPq, CAPES, FAPESP, líder do grupo de pesquisa Formação de educadores 
-		   com suporte em meio digital, certificado em 2003. Coordenou o Programa de Pós-Graduação em Educação: Currículo, da PUC-SP (2009-2013), 
-		   atual vice-coordenadora desse Programa Tem experiência em Educação e Tecnologias, com pesquisas e publicações sobre currículo e tecnologias,
-		   educação a distância, tecnologias e formação de professores, web currículo, cultura digital e educação, narrativa digital.
-		  </div>
-		</div>
-	  </div>
-	</div>
-	
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-</body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
